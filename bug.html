@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    //Incorrect way to add event listener. This can cause unexpected behaviour in some browsers.
+    document.getElementById('myDiv').onclick = function() {
+      alert('Incorrect event Listener');
+    };
+    //Correct way using addEventListener
+    document.getElementById('myDiv').addEventListener('click',function(){
+      alert('Correct event listener');
+    });
+  </script>
+</body>
+</html>
